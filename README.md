@@ -9,4 +9,4 @@
 2. Create a route that turns words into UPPER CASE. For instance, I should be able to visit `/capitalize/hello` and get back the response `HELLO`, or I could visit `/capitalize/this is Kinda Capitalized` and get the response THIS IS KINDA CAPITALIZED.
 
 ## Solution
-[Code](./src/main/java/com.jessica.Spring/) | [Tests](./src/test/java/com.jessica.Spring/)
+[Code](src/main/java/com.jessica.Spring/) | [Tests](src/test/java/com.jessica.Spring/)
