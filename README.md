@@ -1,7 +1,7 @@
 # Spring Web Application
 
 ## Packages, Products, etc.
-[Spring Initializr](https://start.spring.io/) with dependencies web, thymeleaf, devTools, postgreSQL.
+[Spring Initializr](https://start.spring.io/) with dependencies web, thymeleaf, devTools, postgreSQL.       
 [Deployed Heroku site](https://cryptic-journey-45375.herokuapp.com/)
 
 ## The Challenge
