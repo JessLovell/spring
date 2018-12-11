@@ -9,9 +9,8 @@
 2. Create a route that turns words into UPPER CASE. For instance, I should be able to visit `/capitalize/hello` and get back the response `HELLO`, or I could visit `/capitalize/this is Kinda Capitalized` and get the response THIS IS KINDA CAPITALIZED.
 
 ## Solution
-[Code](src/main/java/com/jessica/Spring) | [Tests](src/test/java/com/jessica/Spring)
 Code | Deployed
 --- | ---
-[HelloController](src/main/java/com/jessica/Spring/CapitalizeController.java) | [`/hello`](https://cryptic-journey-45375.herokuapp.com/hello)
-[CapitalizeController](src/main/java/com/jessica/Spring/CapitalizeController.java) | [`/capitalize/this word here`](https://cryptic-journey-45375.herokuapp.com/capitalize/this word here)
-[UpperCase](src/main/java/com/jessica/Spring/CapitalizeController.java) | [Tests](src/test/java/com/jessica/Spring/CapitalizeControllerTest.java)
+[HelloController](src/main/java/com/jessica/Spring/CapitalizeController.java) | [`/hello`](https://cryptic-journey-45375.herokuapp.com/hello)      
+[CapitalizeController](src/main/java/com/jessica/Spring/CapitalizeController.java) | [`/capitalize/this word here`](https://cryptic-journey-45375.herokuapp.com/capitalize/this%20word%20here)      
+[UpperCase](src/main/java/com/jessica/Spring/CapitalizeController.java) | [Tests](src/test/java/com/jessica/Spring/CapitalizeControllerTest.java)     
