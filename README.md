@@ -2,7 +2,7 @@
 
 ## Packages, Products, etc.
 [Spring Initializr](https://start.spring.io/) with dependencies web, thymeleaf, devTools, postgreSQL.       
-[Deployed Heroku site](https://cryptic-journey-45375.herokuapp.com/)
+[Deployed Heroku site](https://cryptic-journey-45375.herokuapp.com/) is currently an error page. 
 
 ## The Challenge
 1. Create a `hello world` route at `/hello`, and ensure that you can visit that route in your browser and see data come back.
