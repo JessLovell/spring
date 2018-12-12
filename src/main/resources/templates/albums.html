@@ -11,5 +11,14 @@
         <p th:text="${album}" ></p>
     </li>
 </ul>
+<form action="/albums" method="POST">
+    Album Title: <input name="title" />
+    Artist: <input name="artist" />
+    No. Songs: <input name="songCount" />
+    Length: <input name="lengthInSeconds" />
+    Image URL: <input name="imageURL" />
+    <input type="submit" />
+
+</form>
 </body>
 </html>

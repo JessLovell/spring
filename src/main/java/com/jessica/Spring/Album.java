@@ -17,12 +17,15 @@ public class Album {
     public double lengthInSeconds;
     public String imageURL;
 
-    public Album(String title, String artist){
+    public Album() {
+    }
+
+    public Album(String title, String artist, int songCount, double lengthInSeconds, String imageURL){
         this.title = title;
         this.artist = artist;
-        this.songCount = 0;
-        this.lengthInSeconds = 0;
-        this.imageURL = null;
+        this.songCount = songCount;
+        this.lengthInSeconds = lengthInSeconds;
+        this.imageURL = imageURL;
     }
 
     public String toString() {
