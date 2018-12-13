@@ -1,8 +1,15 @@
+body {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
 img {
     width: 150px;
 }
-
-li {
-    border: 1px, solid, black;
+div {
+    border: 5px, solid, black;
+    background: whitesmoke;
 }
+
 

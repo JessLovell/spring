@@ -10,29 +10,30 @@
         <h1>ALBUMS!</h1>
         <ul>
             <li th:each="album : ${albums}">
-                <img th:src="${album.imageURL}" />
-                <h3 th:text="${album.title}"></h3>
-                <p th:text="${album.artist}"></p>
-                <p><span th:text="${album.songCount}"></span> songs with <span th:text="${album.lengthInSeconds}"></span> seconds of music.</p>
+                <div>
+                    <img th:src="${album.imageURL}" />
+                    <h3 th:text="${album.title}"></h3>
+                    <p th:text="${album.artist}"></p>
+                    <p><span th:text="${album.songCount}"></span> songs with <span th:text="${album.lengthInSeconds}"></span> seconds of music.</p>
 
-                <!--<form method=GET th:action="${'/albums/' + album.id}">-->
-                    <!--<input type="Submit"  />-->
-                <!--</form>-->
-                <a th:href="${'/albums/' + album.id}">LINK TO ALBUM</a>
-
-                <form th:action="${'/albums/' + album.id + '/songs'}" method="POST">
-                    Song Title: <input name="title" /><br />
-                    Track No.: <input name="trackNum" /><br />
-                    Length: <input name="lengthInSeconds" />(in seconds)<br />
-                    <input type="submit" /><br />
-                </form>
-
+                    <a th:href="${'/albums/' + album.id}">LINK TO ALBUM</a>
+<br><br>
+                    <h4>Update This Album</h4>
+                    <form th:action="${'/albums/' + album.id + '/songs'}" method="POST">
+                        Song Title: <input name="title" /><br />
+                        Track No.: <input name="trackNum" /><br />
+                        Length: <input name="lengthInSeconds" />(in seconds)<br />
+                        <input type="submit" /><br />
+                    </form>
+                </div>
             </li>
         </ul>
-        <form action="/albums" method="POST"><br />
-            Album Title: <input name="title" /><br />
+<br>
+        <h2>Upload a New Album</h2>
+        <form action="/albums" method="POST">
+            Album Title: <input name="title" />    
             Artist: <input name="artist" /><br />
-            No. Songs: <input name="songCount" /><br />
+            No. Songs: <input name="songCount" />     
             Length: <input name="lengthInSeconds" />(in seconds)<br />
             Image URL: <input name="imageURL" /><br />
             <input type="submit" /><br />

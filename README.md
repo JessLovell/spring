@@ -30,4 +30,5 @@ Code | Deployed
 [CapitalizeController](src/main/java/com/jessica/Spring/CapitalizeController.java) | [`/capitalize/this word here`](https://cryptic-journey-45375.herokuapp.com/capitalize/this%20word%20here)      
 [UpperCase](src/main/java/com/jessica/Spring/CapitalizeController.java) | [Tests](src/test/java/com/jessica/Spring/CapitalizeControllerTest.java)
 [AlbumController](src/main/java/com/jessica/Spring/AlbumController.java) | [`/albums`](https://cryptic-journey-45375.herokuapp.com/albums)
+[SongController](src/main/java/com/jessica/Spring/SongController.java) | [`/songs`](https://cryptic-journey-45375.herokuapp.com/songs)
 
