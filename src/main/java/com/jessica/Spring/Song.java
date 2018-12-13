@@ -24,6 +24,6 @@ public class Song {
     }
 
     public String toString() {
-        return this.title;
+        return this.trackNum + " " + this.title;
     }
 }

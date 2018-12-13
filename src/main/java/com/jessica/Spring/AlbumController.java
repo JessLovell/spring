@@ -28,15 +28,24 @@ public class AlbumController {
 
     @RequestMapping(value="/albums", method=RequestMethod.POST)
     public RedirectView create(@RequestParam String title, @RequestParam String artist,
-    @RequestParam int songCount, @RequestParam double lengthInSeconds, @RequestParam String imageURL){
+                               @RequestParam int songCount, @RequestParam double lengthInSeconds,
+                               @RequestParam String imageURL){
 
         Album newAlbum = new Album(title, artist, songCount, lengthInSeconds, imageURL);
         albumRepo.save(newAlbum);
         return new RedirectView("/albums");
     }
 
+    @RequestMapping(value="/albums/{albumId}", method=RequestMethod.GET)
+    public String show(@PathVariable long albumId, Model m) {
+
+        m.addAttribute("album", albumRepo.findById(albumId));
+        return "oneAlbum";
+    }
+
     @RequestMapping(value="/albums/{albumId}/songs", method=RequestMethod.POST)
-    public RedirectView addSong(@PathVariable long albumId, @RequestParam String title, @RequestParam int trackNum, @RequestParam double lengthInSeconds){
+    public RedirectView addSong(@PathVariable long albumId, @RequestParam String title,
+                                @RequestParam int trackNum, @RequestParam double lengthInSeconds){
 
         Song newSong = new Song(title, lengthInSeconds, trackNum);
         newSong.album = albumRepo.findById(albumId).get();
