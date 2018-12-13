@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Albums</title>
+    <link href="/reset.css" rel="stylesheet" />
+    <link href="/styles.css" rel="stylesheet" />
 </head>
     <body>
         <h1>ALBUMS!</h1>
@@ -13,9 +15,10 @@
                 <p th:text="${album.artist}"></p>
                 <p><span th:text="${album.songCount}"></span> songs with <span th:text="${album.lengthInSeconds}"></span> seconds of music.</p>
 
-                <form method=GET th:action="${'/albums/' + album.id}">
-                    <input type="Submit"  />
-                </form>
+                <!--<form method=GET th:action="${'/albums/' + album.id}">-->
+                    <!--<input type="Submit"  />-->
+                <!--</form>-->
+                <a th:href="${'/albums/' + album.id}">LINK TO ALBUM</a>
 
                 <form th:action="${'/albums/' + album.id + '/songs'}" method="POST">
                     Song Title: <input name="title" /><br />

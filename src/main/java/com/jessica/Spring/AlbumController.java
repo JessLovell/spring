@@ -39,7 +39,7 @@ public class AlbumController {
     @RequestMapping(value="/albums/{albumId}", method=RequestMethod.GET)
     public String show(@PathVariable long albumId, Model m) {
 
-        m.addAttribute("album", albumRepo.findById(albumId));
+        m.addAttribute("album", albumRepo.findById(albumId).get());
         return "oneAlbum";
     }
 
