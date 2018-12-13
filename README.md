@@ -15,6 +15,13 @@
 3. A user should be able to add albums to the site.
 4. **Stretch Goal:** A user should be able to update information about albums on the site. A user should be able to delete albums on the site.
 
+### Day 3
+1. Create a Song model. A Song has a title, a length (in seconds), a trackNumber, and the album on which that song appears. Ensure that the relationship between Albums and Songs is appropriately set up.
+2. A user should be able to see information about all the songs on the site, view a page with data about one particular album, add songs to an album, and see the songs that belong to an album when looking at that album.
+3. Write integration tests for your hello world routes.
+4. **Stretch Goals:** A user should be able to update information about songs on the site, delete songs on the site, delete albums on the site, and when they do, all associated songs should also be deleted.
+
+
 
 ## Solution
 Code | Deployed
@@ -23,4 +30,5 @@ Code | Deployed
 [CapitalizeController](src/main/java/com/jessica/Spring/CapitalizeController.java) | [`/capitalize/this word here`](https://cryptic-journey-45375.herokuapp.com/capitalize/this%20word%20here)      
 [UpperCase](src/main/java/com/jessica/Spring/CapitalizeController.java) | [Tests](src/test/java/com/jessica/Spring/CapitalizeControllerTest.java)
 [AlbumController](src/main/java/com/jessica/Spring/AlbumController.java) | [`/albums`](https://cryptic-journey-45375.herokuapp.com/albums)
+[SongController](src/main/java/com/jessica/Spring/SongController.java) | [`/songs`](https://cryptic-journey-45375.herokuapp.com/songs)
 
