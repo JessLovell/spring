@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Songs</title>
+</head>
+    <body>
+        <h1>SONGS!</h1>
+        <ul>
+            <li th:each="song : ${songs}">
+                <span th:text="${song}"></span>
+            </li>
+        </ul>
+        <h2>Add a Song!</h2>
+        <form action="/songs" method="POST">
+            Song Title: <input name="title" /><br />
+            Track No.: <input name="trackNum" /><br />
+            Length: <input name="lengthInSeconds" />(in seconds)<br />
+            <input type="submit" /><br />
+        </form>
+    </body>
+</html>
