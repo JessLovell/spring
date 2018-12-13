@@ -12,6 +12,14 @@
                 <h3 th:text="${album.title}"></h3>
                 <p th:text="${album.artist}"></p>
                 <p><span th:text="${album.songCount}"></span> songs with <span th:text="${album.lengthInSeconds}"></span> seconds of music.</p>
+
+                <form th:action="${'/albums/' + album.id + '/songs'}" method="POST">
+                    Song Title: <input name="title" /><br />
+                    Track No.: <input name="trackNum" /><br />
+                    Length: <input name="lengthInSeconds" />(in seconds)<br />
+                    <input type="submit" /><br />
+                </form>
+
             </li>
         </ul>
         <form action="/albums" method="POST"><br />
