@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Albums</title>
-    <link href="/reset.css" rel="stylesheet" />
     <link href="/styles.css" rel="stylesheet" />
 </head>
     <body>
@@ -18,13 +17,6 @@
 
                     <a th:href="${'/albums/' + album.id}">LINK TO ALBUM</a>
 <br><br>
-                    <h4>Update This Album</h4>
-                    <form th:action="${'/albums/' + album.id + '/songs'}" method="POST">
-                        Song Title: <input name="title" /><br />
-                        Track No.: <input name="trackNum" /><br />
-                        Length: <input name="lengthInSeconds" />(in seconds)<br />
-                        <input type="submit" /><br />
-                    </form>
                 </div>
             </li>
         </ul>
@@ -38,5 +30,6 @@
             Image URL: <input name="imageURL" /><br />
             <input type="submit" /><br />
         </form>
+        <h3><a href="/songs">View All Songs</a></h3>
     </body>
 </html>

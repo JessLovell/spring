@@ -1,8 +1,21 @@
 # Spring Web Application
+## Using the Application
+### Running Locally
+1. `git clone` this repo on your laptop. `cd` into the directory.
+2. Create a local postgres database with the name `album_app`.
+3. Open `application.properties` and
+    * uncomment `#spring.datasource.url=jdbc:postgresql://localhost:5432/album_app` by removing the leading `#`.
+    * Then comment out `spring.datasource.url=${DATABASE_URL}` by adding a leading `#`.
+    * **If running for the first time, uncomment `#spring.jpa.hibernate.ddl-auto=create` by removing the leading `#`. (This command will build the database for you). Comment it out after the DB has been created so you don't keep dropping the tables.**
+4. In the command line use `gradle bootrun` to start the application. Open a browser window to `http://localhost:8080/` to see the application and to navigate to other pages.
+5. To terminate the application type `CRTL + C` in the command line.
+
+### Deployed Site
+1. Go to the [deployed site](https://cryptic-journey-45375.herokuapp.com/) and play around.
+
 
 ## Packages, Products, etc.
-[Spring Initializr](https://start.spring.io/) with dependencies web, thymeleaf, devTools, postgreSQL.       
-[Deployed Heroku site](https://cryptic-journey-45375.herokuapp.com/) is currently an error page. 
+[Spring Initializr](https://start.spring.io/) with dependencies web, thymeleaf, devTools, postgreSQL.
 
 ## The Challenge
 ### Day 1
