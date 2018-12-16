@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>oneAlbum</title>
-    <link href="/reset.css" rel="stylesheet" />
     <link href="/styles.css" rel="stylesheet" />
 
 </head>
@@ -15,11 +14,21 @@
             <p><span th:text="${album.songCount}"></span> songs with <span th:text="${album.lengthInSeconds}"></span> seconds of music.</p>
         </div>
         <div>
-            <h2>Songs on this album</h2>
+            <h3>Songs on this album</h3>
             <ul th:each="song : ${album.songs}">
-                <li th:text="${song}"></li>
+                <li><span th:text="${song.trackNum}"></span> <span th:text="${song.title}"></span></li>
 
             </ul>
         </div>
+        <div>
+            <h3>Update This Album</h3>
+            <form th:action="${'/albums/' + album.id + '/songs'}" method="POST">
+                Song Title: <input name="title" /><br />
+                Track No.: <input name="trackNum" /><br />
+                Length: <input name="lengthInSeconds" />(in seconds)<br />
+                <input type="submit" /><br />
+            </form>
+        </div>
+        <h3><a href="/albums">Back to All Albums</a></h3>
     </body>
 </html>
