@@ -24,6 +24,6 @@ public class Song {
     }
 
     public String toString() {
-        return this.trackNum + " " + this.title + (this.album != null ? this.album.title : " no album");
+        return this.trackNum + " " + this.title + (this.album != null ? " on " + this.album.title : " no album");
     }
 }
