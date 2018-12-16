@@ -4,7 +4,7 @@
 1. `git clone` this repo on your laptop. `cd` into the directory.
 2. Create a local postgres database with the name `album_app`.
 3. Open `application.properties` and
-    * uncomment `#spring.datasource.url=jdbc:postgresql://localhost:5432/album_app` by removing the leading `#`.
+    * Uncomment `#spring.datasource.url=jdbc:postgresql://localhost:5432/album_app` by removing the leading `#`.
     * Then comment out `spring.datasource.url=${DATABASE_URL}` by adding a leading `#`.
     * **If running for the first time, uncomment `#spring.jpa.hibernate.ddl-auto=create` by removing the leading `#`. (This command will build the database for you). Comment it out after the DB has been created so you don't keep dropping the tables.**
 4. In the command line use `gradle bootrun` to start the application. Open a browser window to `http://localhost:8080/` to see the application and to navigate to other pages.
